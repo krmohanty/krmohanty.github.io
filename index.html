@@ -1,10 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Ashlynn Official</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ashlynn — Kuromi</title>
+  <meta name="description" content="Welcome to Ashlynn's website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Welcome to Ashlynn Official</h1>
-  <p>This is my static site!</p>
+  <div class="bg-deco"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="kuromi-ear left"></span>
+      <span class="kuromi-head">♡</span>
+      <span class="kuromi-ear right"></span>
+      <span class="title">Ashlynn</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="welcome card">
+      <h1>Welcome to Ashlynn’s website ✨</h1>
+      <p class="tagline">Cute, cozy, and a little bit Kuromi.</p>
+
+      <div class="contact card-lite">
+        <h2>Say hi!</h2>
+        <form id="mailForm">
+          <label>
+            Your name
+            <input type="text" id="name" placeholder="Your name" required>
+          </label>
+          <label>
+            Your email
+            <input type="email" id="email" placeholder="you@example.com" required>
+          </label>
+          <label>
+            Message
+            <textarea id="message" rows="5" placeholder="Write something sweet…" required></textarea>
+          </label>
+          <button type="submit" class="send">Send ✉️</button>
+          <p class="hint">
+            This site is 100% static. Clicking “Send” opens your email app to email
+            <strong>ashlynnmohanty@gmail.com</strong>.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <aside class="events card">
+      <h2>Events & Updates</h2>
+      <ul id="eventsList" class="events-list">
+        <!-- Filled by script.js from events.json -->
+      </ul>
+      <div class="mini-hint">
+        To edit this list, change <code>events.json</code> and push.
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Ashlynn · Kuromi vibes ♡</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
